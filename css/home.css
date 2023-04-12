@@ -1,0 +1,145 @@
+
+/* Se modifican las propiedades de la etiqueta header (la parte de arriba del website) */
+header{
+    /* Se le asigna un ancho mínimo al header, esto hace que su ancho nunca sea menor a 320 y permite que el ancho se adapte al tamaño de la pantalla siempre y cuando no sea menor a 320.  */
+    min-width: 320px;
+    /* Se agrega la imagen de fondo. con linear-gradient le agrego un fondo negro semitransparente para oscurecer la imagen de fondo. */
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../resources/images/cover-glasses20.jpg');
+    /* Ajusta el tamaño de la imagen para que cubra la totalidad del header */
+    background-size: cover;
+    /* Impide que la imagen se repita varias veces */
+    background-repeat: no-repeat;
+    /* Ajusta la imagen alineandola al centro */
+    background-position:center center ;
+    /* Determina el alto del header */
+    height: 250px;
+    /* Crea una cuadricula mediante la cual se van a acomodar los componentes que estén dentro del header */
+    display:grid;
+
+
+    /* Modifica la cuadricula creada previamente para que tenga 8 cuadrados de ancho y 8 de largo. El valor 1fr se utiliza para establecer que todos los cuadrados van a medir lo mismo.     */
+    grid-template: repeat(8,1fr) / repeat(8,1fr) ;
+  
+}
+
+/* Modificaión de las propiedades del botón de menú (El que está en la parte superior derecha) */
+header .menuButton{
+    /* Establece que este elemento se va a colocar entre las columnas 8 y 9 */
+    grid-column: 8 / 9;
+    /* Se asigna una imagen de fondo al botón */
+    background-image: url('../resources/icons/menu.svg');
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 24px;
+    /* Se modifica el color de fondo para que sea transparente */
+    background-color: transparent;
+    /* Se quita el borde del botón */
+    border: 0;
+    /* Se centra horizontalmente el botón utilizando la propiedad de márgenes */
+    margin: 0 auto;
+    /* Se centra verticalmente el botón dentro de la cuadrícula en la que se encuentra. */
+    align-self: center;
+}
+/* Modificación de las propiedades del logo (el ojo) */
+header .logo{
+    /* Se coloca entre las columnas 4 y 6 de la cuadrícula */
+    grid-column: 4 / 6;
+    /* Se coloca entre los renglones 3 y 4 de la cuadrícula. */
+    grid-row: 3 / 4;
+    /* Se centra verticalmente el logo dentro de sus cuadrículas */
+    align-self: center;
+    /* Se centra horizontalmente el componente */
+    margin: 0 auto;
+
+    background-image: url('../resources/icons/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 35px;
+    width: 60px;
+    /* Esta propiedad se usa para re-posicionar el elemento en base a su posición actual. */
+    position: relative;
+    /* Esta propiedad se usa junto con la propiedad position:relative, indica cuantos pixeles se va a desplazar en el eje vertical  */
+    top:15px;
+
+        
+}
+
+/* Modificación de las propiedades del titulo ubicado en el header.  */
+header h1.htitle{
+
+    grid-column: 2 / 8;
+    grid-row: 4 / 6;
+    align-self: center;
+    margin: 0 auto;
+   
+    color:#EAE4E4;
+    font-family: sans-serif;
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+
+header h2.hsubtitle{
+    grid-column: 2 / 8;
+    grid-row: 6 / 7;
+    text-align: center;
+    vertical-align: middle;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    color: #A69D9D;
+    font-weight: normal;
+    margin: 0 auto;
+
+}
+
+
+section.graySection{
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #DADADA;
+    min-height: 120px;
+    padding: 24px 0;
+}
+
+
+.graySection h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #252525;
+    text-align: center;
+
+}
+.graySection p{
+    text-align: center;
+    font-size: 1.6rem;  
+    font-family: sans-serif;
+    margin:0 25px;
+    margin-top: 12px;
+
+    color: #252525;
+    /* line-height: px; */
+}
+
+.graySection.test
+{
+    height: 360px;
+   
+}
+
+.graySection.test .test__image{
+    background-image: url('../resources/images/blinkyman25.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 135px;
+    height: 162px;
+    margin: 0 auto;
+    display: block;
+    
+}
+
