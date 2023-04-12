@@ -1,9 +1,13 @@
-.parrafo1 {
-    background-color: aqua;
-    
+/*Este es el css central, todos los archivos html van a inmportarlo  */
 
+/* El asterisco se usa para indicar que se van a alterar todos los componentes */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-.parrafo2{
-    background-color: red;
-    font-size: 45px;
+
+/* html es la etiqueta raíz. */
+html{
+    font-size: 62.5%;
 }
