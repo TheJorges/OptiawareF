@@ -22,6 +22,17 @@
     <body>
         
         <header>
+            <nav class="headerNav">
+                <ul>
+                    <li class="headerNav__li"><a href="">Inicio</a></li>
+                    <li class="headerNav__li"><a href="">Registrarse</a></li>
+                    <li class="headerNav__li"><a href="">Ingresar</a></li>
+                    <li class="headerNav__li"><a href="">Información</a></li>
+                    <li class="headerNav__li"><a href="">Cuestionario</a></li>
+                    <li class="headerNav__li"><a href="">Ejercicios</a></li>
+                    <li class="headerNav__li"><a href="">Nosotros</a></li>
+                </ul>
+            </nav>
             <button class="menuButton"></button>
             <i class="logo"></i>
 
@@ -30,6 +41,7 @@
   
         </header>
         <main>
+            <div class="homeContent">
             <section class="graySection presentation">
                 <h2>¿Qué es?</h2>
                 <p>Iniciativa enfocada en concientizar e informar sobre los problemas derivados de la fatiga visual y su impacto en la salud</p>
@@ -41,24 +53,42 @@
             <section class="graySection test">
                 <h2 class="test__title">Test</h2>
               
-                    <i class="test__image"></i>
+                    <i class="test__image blinkyImage"></i>
                   
                 <p class="test__txt">Realiza nuestro test en línea para descubrir si presentas síntomas de fatiga visual.</p>
+                <button class="blueButton">Realizar test</button>
             </section>
             <section class="graySection exercises">
                 <h2 class="exercises__title">Ejercicios</h2>
+                <i class="exercises__image blinkyImage"></i>
                 <p class="exercises__txt">Iniciativa enfocada en concientizar e informar sobre los problemas derivados de la fatiga visual y su impacto en la salud</p>
+                <button class="blueButton">Realizar ejercicios</button>
             </section>
+        </div>
         </main>
         <footer>
-            <nav>
-                <ul>
-                    <li>link importante 1</li>
-                    <li>link importante 2</li>
-                    <li>link importante 3</li>
-                    <li>link importante 4</li>
-                </ul>
-            </nav>
+            <section class="footerSection">
+                <h3 class="footerTitle">Sitio</h3>
+                <nav class="footerNav">
+                    <ul>
+                        <li>Inicio</li>
+                        <li>Registrarse</li>
+                        <li>Ingresar</li>
+                        <li>Cuestionario</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="footerSection">
+                <h3 class="footerTitle">Aprende más</h3>
+                <nav class="footerNav">
+                    <ul>
+                        <li>Información</li>
+                        <li>Nosotros</li>
+                        <li>Contacto</li>              
+                    </ul>
+                </nav>
+            </section>
+            <h3 class="footerTitle">Optiaware inc.</h3>
         </footer>
     </body>
 </html>
