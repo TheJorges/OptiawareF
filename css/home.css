@@ -11,7 +11,7 @@ header{
     background-repeat: no-repeat;
     /* Ajusta la imagen alineandola al centro */
     background-position:center center ;
-    /* Determina el alto del header */
+    /* Dete´rmina el alto del header */
     height: 250px;
     /* Crea una cuadricula mediante la cual se van a acomodar los componentes que estén dentro del header */
     display:grid;
@@ -21,7 +21,9 @@ header{
     grid-template: repeat(8,1fr) / repeat(8,1fr) ;
   
 }
-
+header .headerNav{
+    display: none;
+}
 /* Modificaión de las propiedades del botón de menú (El que está en la parte superior derecha) */
 header .menuButton{
     /* Establece que este elemento se va a colocar entre las columnas 8 y 9 */
@@ -32,8 +34,8 @@ header .menuButton{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
     /* Se modifica el color de fondo para que sea transparente */
     background-color: transparent;
     /* Se quita el borde del botón */
@@ -103,6 +105,10 @@ section.graySection{
     border-bottom: 1px solid #DADADA;
     min-height: 120px;
     padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
 }
 
 
@@ -118,11 +124,11 @@ section.graySection{
     text-align: center;
     font-size: 1.6rem;  
     font-family: sans-serif;
-    margin:0 25px;
-    margin-top: 12px;
+    margin:0 auto;
 
-    color: #252525;
-    /* line-height: px; */
+    color: #3F3F3F;
+    line-height: 2.4rem;
+    max-width: 350px;
 }
 
 .graySection.test
@@ -131,15 +137,107 @@ section.graySection{
    
 }
 
-.graySection.test .test__image{
-    background-image: url('../resources/images/blinkyman25.png');
+.graySection .blinkyImage{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     width: 135px;
-    height: 162px;
+    min-height: 162px;
     margin: 0 auto;
     display: block;
+}
+.graySection.test .test__image{
+    background-image: url('../resources/images/blinkyman25.png');
+
     
 }
+.graySection.exercises .exercises__image{
+    background-image: url('../resources/images/blinkywoman25.png');
+}
 
+@media(min-width:744px) {
+    header{
+        height: 400px;
+    }
+    header .headerNav{
+        display:block;
+
+        grid-column: 1 / 9;
+        margin-top: 15px;
+        font-family: sans-serif;
+    }
+    header .headerNav ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1.6rem;
+    }
+    header .headerNav li{
+        list-style: none;
+    }
+    header .headerNav a{
+        text-decoration: none;
+        color: #EAE4E4;
+    }
+    header .menuButton{
+        display: none;
+    }
+    header .logo{
+        position: relative;
+        top: 40px;
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 20px;
+    }
+    .homeContent{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1115px;
+        justify-content: center;
+        background-color: #EAEAEA;
+        margin: 0 auto;
+    }
+    section.graySection{
+        background-color: #EAEAEA;
+        border-bottom: 0px;
+        
+        min-width: 372px;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .graySection.test p{
+        margin-bottom: 26px;
+    }
+}
+
+@media(min-width:1024px){
+    header{
+        height: 600px;
+    }
+    header .headerNav{
+        margin-top: 20px;
+
+    }
+
+    header .logo{
+        position: relative;
+        top: 75px;
+    }
+    header h1.htitle{
+        font-size: 4.8rem;
+
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 40px;
+        font-size: 2.4rem;
+    }
+    .homeContent{
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+}
