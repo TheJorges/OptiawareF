@@ -196,67 +196,46 @@ section.graySection{
     }
     
 /* Mi codigo para la pagina*/
-.informacion{
-    color:black;
-   font-size: 40px; 
-   text-align: center;
+.headlin{
+    font-size:15px;
+}
+.titu{
+    font-size:40px;
+}
+.container1{
+background:#DADADA;
+position:relative;
+left:100px;
+}
+.container2{
+
+position:relative;
+right:-1000px;
+}
+.container3{
+background:#DADADA;
+position:relative;
+left:100px;
 }
 
-.infoque {
-    background-color: #EAEAEA;
-    color:black;
-    font-size: 20px; 
-    text-align: center;
-    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
-    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
-    padding: 20px;
+.container4{
+position:relative;
+right:-1000px;
 }
 
-.que_descripcion
-{
-    color:#000000;
-    font-size: 20px; 
-    padding: 40px;
-    text-align: center;
+.container5{
+background:#DADADA;
+position:relative;
+left:100px;
+}
+.container6{
+
+position:relative;
+right:-1000px;
 }
 
-.infocomo{
-    background-color: #dbdbdb;
-    color:black;
-    font-size: 20px; 
-    text-align: center;
-    padding: 20px;
-    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
-    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
-}
 
-.como_descripcion{
-    color:#000000;
-    font-size: 20px; 
-    padding: 40px;
-    text-align: center;
-}
 
-.infohorario
-{
-    background-color: #b6b5b5;
-    color:black;
-    padding: 20px;
-    font-size: 20px; 
-    text-align: center;
-}
-
-.horario_descripcion
-{
-    color:#000000;
-    font-size: 20px; 
-    padding: 40px;
-    text-align: center;
-}
-.que_img{
-    height: 300 px;
-    width: 300px;
-  }
 
 }
 
@@ -319,61 +298,6 @@ section.graySection{
     }
     
 /* Mi codigo para la pagina*/
-.informacion{
-    color:black;
-   font-size: 40px; 
-   text-align: center;
-}
-
-.infoque {
-    background-color: #EAEAEA;
-    color:black;
-    font-size: 25px; 
-    text-align: center;
-    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
-    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
-}
-
-.que_descripcion
-{
-    color:#000000;
-    font-size: 22px; 
-    text-align: center;
-}
-
-.infocomo{
-    background-color: #dbdbdb;
-    color:black;
-    font-size: 25px; 
-    text-align: center;
-    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
-    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
-}
-
-.como_descripcion{
-    color:#000000;
-    font-size: 22px; 
-    text-align: center;
-}
-
-.infohorario
-{
-    background-color: #b6b5b5;
-    color:black;
-    font-size: 25px; 
-    text-align: center;
-}
-
-.horario_descripcion
-{
-    color:#000000;
-    font-size: 22px; 
-    text-align: center;
-}
-.que_img{
-    height: 300 px;
-    width: 300px;
-  }
 
 }
 
@@ -407,88 +331,6 @@ section.graySection{
     }
     
 /* Mi codigo para la pagina*/
-.informacion{
-    color:black;
-   font-size: 40px; 
-   text-align: center;
-}
 
-.infoque {
-    background-color: #ffffff;
-    color:black;
-    font-size: 25px; 
-    text-align:justify;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
-    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
-}
-
-.que_descripcion
-{
-    color: black;
-    font-size: 22px; 
-    text-align: left;
-}
-
-.infocomo{
-background-color:#e6e6e6;
-    color:black;
-    font-size: 25px; 
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 5px solid #000000; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
-    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
-}
-
-.como_descripcion{
-    color:black;
-    font-size: 22px; 
-    text-align: left;
-}
-
-.infohorario
-{
-    background-color: #bebcbc;
-    color:black;
-    font-size: 25px; 
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 5px solid #4d599b; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
-    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
-}
-
-.horario_descripcion
-{
-    color:black;
-    font-size: 22px; 
-    text-align: left;
-}
-   .infotit {
-    font-size: 50 px;
-    justify-self: center;
-  }
-
-  .que_img{
-    height: 400 px;
-    width: 400px;
-  }
-  .como_img{
-    height: 300 px;
-    width: 300px;
-  }
-  .content{
-    display: flex;
-    justify-content: space-between;
-  align-items: flex-start;
-  grid-gap: 30px;
-  }
  }
   
-
-
