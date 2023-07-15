@@ -256,6 +256,17 @@ section.graySection{
 .que_img{
     height: 300 px;
     width: 300px;
+    margin-top: 80px;
+  }
+  .containere {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1050px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
   }
 
 }

@@ -196,47 +196,67 @@ section.graySection{
     }
     
 /* Mi codigo para la pagina*/
-.headlin{
-    font-size:15px;
-}
-.titu{
-    font-size:40px;
-}
-.container1{
-background:#DADADA;
-position:relative;
-left:100px;
-}
-.container2{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Estilos del título */
+  .titu {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos de los contenedores */
+  .container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-position:relative;
-right:-1000px;
-}
-.container3{
-background:#DADADA;
-position:relative;
-left:100px;
-}
+  }
+  .content{
+    display: flex;
+    align-items: center;
 
-.container4{
-position:relative;
-right:-1000px;
-}
+  }
+  .subtit{
+    font-size: 20px;
+    color:rgb(46, 100, 55);
+    margin-bottom: 10px;
+  }
+  /* Estilos de las listas */
+  .headlin {
+    font-size: 16px;
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+  }
 
-.container5{
-background:#DADADA;
-position:relative;
-left:100px;
-}
-.container6{
+  
+  /* Transiciones */
+  .container:hover,
+  .container:focus {
+    background-color: #a1e6b2;
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
+  }
 
-position:relative;
-right:-1000px;
-}
+  .primg{
+    width: 100px;
+    margin-left: 200px;
+  }
 
-
-
-
+  .primg2{
+    width: 100px;
+    margin-left: 50px;
+    margin-right: 200px;
+  }
 }
 
 @media(min-width:744px) {
