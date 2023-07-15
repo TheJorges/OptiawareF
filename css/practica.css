@@ -100,6 +100,42 @@ header h2.hsubtitle{
 }
 
 
+section.graySection{
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #DADADA;
+    min-height: 120px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+
+.graySection h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #252525;
+    text-align: center;
+
+}
+.graySection p{
+    text-align: center;
+    font-size: 1.6rem;  
+    font-family: sans-serif;
+    margin:0 auto;
+
+    color: #3F3F3F;
+    line-height: 2.4rem;
+    max-width: 350px;
+}
+
+.graySection.test
+{
+    height: 360px;
+   
+}
 
 @media(min-width:10px) {
     header{
@@ -160,43 +196,21 @@ header h2.hsubtitle{
     }
     
 /* Mi codigo para la pagina*/
-
-div {
-    display:grid;
-    place-items:center;
-    grid-template-columns:
-    repeat( auto-fit,
-    minmax(150px,1fr));
-    gap:32px;
-}
-
-.pract_img{
-    border-radius:40px;
-    width:250px;
-    height:250px;
-    box-shadow: 0px 0px 30 px #000;
-
-    display: inline-block;
-    border: 10px solid #a5a2a2; /* Contorno del botón */
-    padding: 5px; /* Espacio alrededor de la imagen */
-    transition: background-color 0.3s; /* Transición suave de color de fondo */
-
-}
-
-  .pract_img:hover,
-  .pract_img:focus {
-    background-color: #9cc0a4; /* Cambia el color de fondo al pasar el ratón o estar enfocado */
-  }
-  
-h1{
-    text-align: center;
-    font-size:30px;
-    margin-bottom: 20px;
-}
 .headlin{
+    font-size:15px;
+}
+.titu{
     font-size:40px;
 }
+
 .container{
+    display: block;
+}
+.container1{
+  display: flex;
+  flex-direction: column;
+  clear:both;
+  margin:40px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -205,9 +219,64 @@ h1{
     max-width: 600px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+  /* Transiciones */
+  .container1:hover,
+  .container1:focus {
+    background-color: #a1e6b2;
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .primg{
+    width: 100px;
+    margin-left: 200px;
+  }
+  .primg1{
+    width: 500px;
+    margin-left: 30px;
+    margin-top:10px;
+  }
+.primg2{
+  width: 200px;
+  margin-left: 180px;
+  margin-top:10px;
+}
+p{
+    font-size:20px;
+    color:rgb(36, 66, 36);
+}
+.titu {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+h2{
+    font-size:28px;
+    color: rgb(37, 41, 37)
 }
 
 
+@media (min-width: 768px) {
+  main {
+    display: flex;
+  }
+
+  .container1,
+  .container3 {
+    order: 1;
+    margin-right: auto;
+  }
+
+  .container2,
+  .container4 {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+}
 
 @media(min-width:744px) {
     header{
@@ -304,5 +373,3 @@ h1{
 
  }
   
-
-
