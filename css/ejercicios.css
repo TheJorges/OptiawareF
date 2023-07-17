@@ -186,7 +186,10 @@ div {
   .pract_img:hover,
   .pract_img:focus {
     background-color: #9cc0a4; /* Cambia el color de fondo al pasar el ratón o estar enfocado */
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
   }
+
   
 h1{
     text-align: center;
