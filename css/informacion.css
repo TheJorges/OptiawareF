@@ -151,7 +151,7 @@ section.graySection{
     header .headerNav ul{
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
         font-size: 1.0rem;
     }
     header .headerNav li{
@@ -256,7 +256,7 @@ section.graySection{
 .que_img{
     height: 300 px;
     width: 300px;
-    margin-top: 80px;
+    margin-top: 40px;
   }
   .containere {
     background-color: #fff;
