@@ -1,0 +1,403 @@
+header{
+    /* Se le asigna un ancho mínimo al header, esto hace que su ancho nunca sea menor a 320 y permite que el ancho se adapte al tamaño de la pantalla siempre y cuando no sea menor a 320.  */
+    min-width: 320px;
+    /* Se agrega la imagen de fondo. con linear-gradient le agrego un fondo negro semitransparente para oscurecer la imagen de fondo. */
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../resources/images/cover-glasses20.jpg');
+    /* Ajusta el tamaño de la imagen para que cubra la totalidad del header */
+    background-size: cover;
+    /* Impide que la imagen se repita varias veces */
+    background-repeat: no-repeat;
+    /* Ajusta la imagen alineandola al centro */
+    background-position:center center ;
+    /* Dete´rmina el alto del header */
+    height: 250px;
+    /* Crea una cuadricula mediante la cual se van a acomodar los componentes que estén dentro del header */
+    display:grid;
+
+
+    /* Modifica la cuadricula creada previamente para que tenga 8 cuadrados de ancho y 8 de largo. El valor 1fr se utiliza para establecer que todos los cuadrados van a medir lo mismo.     */
+    grid-template: repeat(8,1fr) / repeat(8,1fr) ;
+  
+}
+header .headerNav{
+    display: none;
+}
+
+
+/* Modificaión de las propiedades del botón de menú (El que está en la parte superior derecha) */
+header .menuButton{
+    /* Establece que este elemento se va a colocar entre las columnas 8 y 9 */
+    grid-column: 8 / 9;
+    /* Se asigna una imagen de fondo al botón */
+    background-image: url('../resources/icons/menu.svg');
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 36px;
+    height: 36px;
+    /* Se modifica el color de fondo para que sea transparente */
+    background-color: transparent;
+    /* Se quita el borde del botón */
+    border: 0;
+    /* Se centra horizontalmente el botón utilizando la propiedad de márgenes */
+    margin: 0 auto;
+    /* Se centra verticalmente el botón dentro de la cuadrícula en la que se encuentra. */
+    align-self: center;
+}
+/* Modificación de las propiedades del logo (el ojo) */
+header .logo{
+    /* Se coloca entre las columnas 4 y 6 de la cuadrícula */
+    grid-column: 4 / 6;
+    /* Se coloca entre los renglones 3 y 4 de la cuadrícula. */
+    grid-row: 3 / 4;
+    /* Se centra verticalmente el logo dentro de sus cuadrículas */
+    align-self: center;
+    /* Se centra horizontalmente el componente */
+    margin: 0 auto;
+
+    background-image: url('../resources/icons/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 60px;
+    width: 60px;
+    /* Esta propiedad se usa para re-posicionar el elemento en base a su posición actual. */
+    position: relative;
+    /* Esta propiedad se usa junto con la propiedad position:relative, indica cuantos pixeles se va a desplazar en el eje vertical  */
+    top:15px;
+
+     
+}
+
+/* Modificación de las propiedades del titulo ubicado en el header.  */
+header h1.htitle{
+
+    grid-column: 2 / 8;
+    grid-row: 4 / 6;
+    align-self: center;
+    margin: 0 auto;
+   
+    color:#EAE4E4;
+    font-family: sans-serif;
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+
+header h2.hsubtitle{
+    grid-column: 2 / 8;
+    grid-row: 6 / 7;
+    text-align: center;
+    vertical-align: middle;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    color: #A69D9D;
+    font-weight: normal;
+    margin: 0 auto;
+
+}
+
+
+
+@media(min-width:10px) {
+    header{
+        height: 70px;
+    }
+    header .headerNav{
+        display:block;
+
+        grid-column: 1 / 9;
+        margin-top: 15px;
+        font-family: sans-serif;
+    }
+    header .headerNav ul{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.0rem;
+    }
+    header .headerNav li{
+        list-style: none;
+    }
+    header .headerNav a{
+        text-decoration: none;
+        color: #EAE4E4;
+    }
+    header .menuButton{
+        display: none;
+    }
+    header .logo{
+        position: relative;
+        top: 40px;
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 20px;
+    }
+    .homeContent{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1115px;
+        justify-content: center;
+        background-color: #EAEAEA;
+        margin: 0 auto;
+    }
+    section.graySection{
+        background-color: #EAEAEA;
+        border-bottom: 0px;
+        
+        min-width: 372px;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .graySection.test p{
+        margin-bottom: 26px;
+    }
+    
+/* Mi codigo para la pagina*/
+
+div {
+    display:grid;
+    place-items:center;
+    grid-template-columns:
+    repeat( auto-fit,
+    minmax(150px,1fr));
+    gap:32px;
+}
+
+.pract_img{
+    border-radius:40px;
+    width:150px;
+    height:150px;
+    box-shadow: 0px 0px 30 px #000;
+
+    display: inline-block;
+    border: 10px solid #a5a2a2; /* Contorno del botón */
+    padding: 5px; /* Espacio alrededor de la imagen */
+    transition: background-color 0.3s; /* Transición suave de color de fondo */
+
+}
+
+  .pract_img:hover,
+  .pract_img:focus {
+    background-color: #9cc0a4; /* Cambia el color de fondo al pasar el ratón o estar enfocado */
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  
+h1{
+    text-align: center;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.headlin{
+    font-size:40px;
+}
+.container{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+}
+
+
+
+@media(min-width:744px) {
+    header{
+        height: 70px;
+    }
+    header .headerNav{
+        display:block;
+
+        grid-column: 1 / 9;
+        margin-top: 15px;
+        font-family: sans-serif;
+    }
+    header .headerNav ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1.6rem;
+    }
+    header .headerNav li{
+        list-style: none;
+    }
+    header .headerNav a{
+        text-decoration: none;
+        color: #EAE4E4;
+    }
+    header .menuButton{
+        display: none;
+    }
+    header .logo{
+        position: relative;
+        top: 40px;
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 20px;
+    }
+    .homeContent{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1115px;
+        justify-content: center;
+        background-color: #EAEAEA;
+        margin: 0 auto;
+    }
+    section.graySection{
+        background-color: #EAEAEA;
+        border-bottom: 0px;
+        
+        min-width: 372px;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .graySection.test p{
+        margin-bottom: 26px;
+    }
+    
+/* Mi codigo para la pagina*/
+div {
+    display:grid;
+    place-items:center;
+    grid-template-columns:
+    repeat( auto-fit,
+    minmax(150px,1fr));
+    gap:32px;
+}
+
+.pract_img{
+    border-radius:40px;
+    width:250px;
+    height:250px;
+    box-shadow: 0px 0px 30 px #000;
+
+    display: inline-block;
+    border: 10px solid #a5a2a2; /* Contorno del botón */
+    padding: 5px; /* Espacio alrededor de la imagen */
+    transition: background-color 0.3s; /* Transición suave de color de fondo */
+
+}
+
+  .pract_img:hover,
+  .pract_img:focus {
+    background-color: #9cc0a4; /* Cambia el color de fondo al pasar el ratón o estar enfocado */
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  
+h1{
+    text-align: center;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.headlin{
+    font-size:40px;
+}
+.container{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+}
+
+
+
+@media(min-width:1024px){
+    header{
+        height: 150px;
+    }
+    header .headerNav{
+        margin-top: 20px;
+
+    }
+
+    header .logo{
+        position: relative;
+        top: 75px;
+    }
+    header h1.htitle{
+        font-size: 4.8rem;
+
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 40px;
+        font-size: 2.4rem;
+    }
+    .homeContent{
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+    
+/* Mi codigo para la pagina*/
+div {
+    display:grid;
+    place-items:center;
+    grid-template-columns:
+    repeat( auto-fit,
+    minmax(150px,1fr));
+    gap:32px;
+}
+
+.pract_img{
+    border-radius:40px;
+    width:250px;
+    height:250px;
+    box-shadow: 0px 0px 30 px #000;
+
+    display: inline-block;
+    border: 10px solid #a5a2a2; /* Contorno del botón */
+    padding: 5px; /* Espacio alrededor de la imagen */
+    transition: background-color 0.3s; /* Transición suave de color de fondo */
+
+}
+
+  .pract_img:hover,
+  .pract_img:focus {
+    background-color: #9cc0a4; /* Cambia el color de fondo al pasar el ratón o estar enfocado */
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  
+h1{
+    text-align: center;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.headlin{
+    font-size:40px;
+}
+.container{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ }
+  
+
+

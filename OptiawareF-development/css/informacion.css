@@ -1,0 +1,505 @@
+header{
+    /* Se le asigna un ancho mínimo al header, esto hace que su ancho nunca sea menor a 320 y permite que el ancho se adapte al tamaño de la pantalla siempre y cuando no sea menor a 320.  */
+    min-width: 320px;
+    /* Se agrega la imagen de fondo. con linear-gradient le agrego un fondo negro semitransparente para oscurecer la imagen de fondo. */
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../resources/images/cover-glasses20.jpg');
+    /* Ajusta el tamaño de la imagen para que cubra la totalidad del header */
+    background-size: cover;
+    /* Impide que la imagen se repita varias veces */
+    background-repeat: no-repeat;
+    /* Ajusta la imagen alineandola al centro */
+    background-position:center center ;
+    /* Dete´rmina el alto del header */
+    height: 250px;
+    /* Crea una cuadricula mediante la cual se van a acomodar los componentes que estén dentro del header */
+    display:grid;
+
+
+    /* Modifica la cuadricula creada previamente para que tenga 8 cuadrados de ancho y 8 de largo. El valor 1fr se utiliza para establecer que todos los cuadrados van a medir lo mismo.     */
+    grid-template: repeat(8,1fr) / repeat(8,1fr) ;
+  
+}
+header .headerNav{
+    display: none;
+}
+
+
+/* Modificaión de las propiedades del botón de menú (El que está en la parte superior derecha) */
+header .menuButton{
+    /* Establece que este elemento se va a colocar entre las columnas 8 y 9 */
+    grid-column: 8 / 9;
+    /* Se asigna una imagen de fondo al botón */
+    background-image: url('../resources/icons/menu.svg');
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 36px;
+    height: 36px;
+    /* Se modifica el color de fondo para que sea transparente */
+    background-color: transparent;
+    /* Se quita el borde del botón */
+    border: 0;
+    /* Se centra horizontalmente el botón utilizando la propiedad de márgenes */
+    margin: 0 auto;
+    /* Se centra verticalmente el botón dentro de la cuadrícula en la que se encuentra. */
+    align-self: center;
+}
+/* Modificación de las propiedades del logo (el ojo) */
+header .logo{
+    /* Se coloca entre las columnas 4 y 6 de la cuadrícula */
+    grid-column: 4 / 6;
+    /* Se coloca entre los renglones 3 y 4 de la cuadrícula. */
+    grid-row: 3 / 4;
+    /* Se centra verticalmente el logo dentro de sus cuadrículas */
+    align-self: center;
+    /* Se centra horizontalmente el componente */
+    margin: 0 auto;
+
+    background-image: url('../resources/icons/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 60px;
+    width: 60px;
+    /* Esta propiedad se usa para re-posicionar el elemento en base a su posición actual. */
+    position: relative;
+    /* Esta propiedad se usa junto con la propiedad position:relative, indica cuantos pixeles se va a desplazar en el eje vertical  */
+    top:15px;
+
+     
+}
+
+/* Modificación de las propiedades del titulo ubicado en el header.  */
+header h1.htitle{
+
+    grid-column: 2 / 8;
+    grid-row: 4 / 6;
+    align-self: center;
+    margin: 0 auto;
+   
+    color:#EAE4E4;
+    font-family: sans-serif;
+    font-size: 3.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+
+header h2.hsubtitle{
+    grid-column: 2 / 8;
+    grid-row: 6 / 7;
+    text-align: center;
+    vertical-align: middle;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    color: #A69D9D;
+    font-weight: normal;
+    margin: 0 auto;
+
+}
+
+
+section.graySection{
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #DADADA;
+    min-height: 120px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+
+.graySection h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #252525;
+    text-align: center;
+
+}
+.graySection p{
+    text-align: center;
+    font-size: 1.6rem;  
+    font-family: sans-serif;
+    margin:0 auto;
+
+    color: #3F3F3F;
+    line-height: 2.4rem;
+    max-width: 350px;
+}
+
+.graySection.test
+{
+    height: 360px;
+   
+}
+
+@media(min-width:10px) {
+    header{
+        height: 70px;
+    }
+    header .headerNav{
+        display:block;
+
+        grid-column: 1 / 9;
+        margin-top: 15px;
+        font-family: sans-serif;
+    }
+    header .headerNav ul{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.0rem;
+    }
+    header .headerNav li{
+        list-style: none;
+    }
+    header .headerNav a{
+        text-decoration: none;
+        color: #EAE4E4;
+    }
+    header .menuButton{
+        display: none;
+    }
+    header .logo{
+        position: relative;
+        top: 40px;
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 20px;
+    }
+    .homeContent{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1115px;
+        justify-content: center;
+        background-color: #EAEAEA;
+        margin: 0 auto;
+    }
+    section.graySection{
+        background-color: #EAEAEA;
+        border-bottom: 0px;
+        
+        min-width: 372px;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .graySection.test p{
+        margin-bottom: 26px;
+    }
+    
+/* Mi codigo para la pagina*/
+.informacion{
+    color:black;
+   font-size: 40px; 
+   text-align: center;
+}
+
+.infoque {
+    background-color: #EAEAEA;
+    color:black;
+    font-size: 20px; 
+    text-align: center;
+    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
+    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
+    padding: 20px;
+}
+
+.que_descripcion
+{
+    color:#000000;
+    font-size: 20px; 
+    padding: 40px;
+    text-align: center;
+}
+
+.infocomo{
+    background-color: #dbdbdb;
+    color:black;
+    font-size: 20px; 
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
+    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
+}
+
+.como_descripcion{
+    color:#000000;
+    font-size: 20px; 
+    padding: 40px;
+    text-align: center;
+}
+
+.infohorario
+{
+    background-color: #b6b5b5;
+    color:black;
+    padding: 20px;
+    font-size: 20px; 
+    text-align: center;
+}
+
+.horario_descripcion
+{
+    color:#000000;
+    font-size: 20px; 
+    padding: 40px;
+    text-align: center;
+}
+.que_img{
+    height: 300 px;
+    width: 300px;
+    margin-top: 40px;
+  }
+  .containere {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1050px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  }
+
+}
+
+@media(min-width:744px) {
+    header{
+        height: 70px;
+    }
+    header .headerNav{
+        display:block;
+
+        grid-column: 1 / 9;
+        margin-top: 15px;
+        font-family: sans-serif;
+    }
+    header .headerNav ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1.6rem;
+    }
+    header .headerNav li{
+        list-style: none;
+    }
+    header .headerNav a{
+        text-decoration: none;
+        color: #EAE4E4;
+    }
+    header .menuButton{
+        display: none;
+    }
+    header .logo{
+        position: relative;
+        top: 40px;
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 20px;
+    }
+    .homeContent{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1115px;
+        justify-content: center;
+        background-color: #EAEAEA;
+        margin: 0 auto;
+    }
+    section.graySection{
+        background-color: #EAEAEA;
+        border-bottom: 0px;
+        
+        min-width: 372px;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .graySection.test p{
+        margin-bottom: 26px;
+    }
+    
+/* Mi codigo para la pagina*/
+.informacion{
+    color:black;
+   font-size: 40px; 
+   text-align: center;
+}
+
+.infoque {
+    background-color: #EAEAEA;
+    color:black;
+    font-size: 25px; 
+    text-align: center;
+    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
+    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
+}
+
+.que_descripcion
+{
+    color:#000000;
+    font-size: 22px; 
+    text-align: center;
+}
+
+.infocomo{
+    background-color: #dbdbdb;
+    color:black;
+    font-size: 25px; 
+    text-align: center;
+    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
+    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
+}
+
+.como_descripcion{
+    color:#000000;
+    font-size: 22px; 
+    text-align: center;
+}
+
+.infohorario
+{
+    background-color: #b6b5b5;
+    color:black;
+    font-size: 25px; 
+    text-align: center;
+}
+
+.horario_descripcion
+{
+    color:#000000;
+    font-size: 22px; 
+    text-align: center;
+}
+.que_img{
+    height: 300 px;
+    width: 300px;
+  }
+
+}
+
+
+
+@media(min-width:1024px){
+    header{
+        height: 150px;
+    }
+    header .headerNav{
+        margin-top: 20px;
+
+    }
+
+    header .logo{
+        position: relative;
+        top: 75px;
+    }
+    header h1.htitle{
+        font-size: 4.8rem;
+
+    }
+    header h2.hsubtitle{
+        position: relative;
+        bottom: 40px;
+        font-size: 2.4rem;
+    }
+    .homeContent{
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+    
+/* Mi codigo para la pagina*/
+.informacion{
+    color:black;
+   font-size: 40px; 
+   text-align: center;
+}
+
+.infoque {
+    background-color: #ffffff;
+    color:black;
+    font-size: 25px; 
+    text-align:justify;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    border-bottom: 5px solid #0d0d0e; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
+    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
+}
+
+.que_descripcion
+{
+    color: black;
+    font-size: 22px; 
+    text-align: left;
+}
+
+.infocomo{
+background-color:#e6e6e6;
+    color:black;
+    font-size: 25px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid #000000; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
+    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
+}
+
+.como_descripcion{
+    color:black;
+    font-size: 22px; 
+    text-align: left;
+}
+
+.infohorario
+{
+    background-color: #bebcbc;
+    color:black;
+    font-size: 25px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid #4d599b; /* Agrega un borde inferior sólido de 1 píxel en color gris claro */
+    padding-bottom: 20px; /* Agrega un espacio entre el contenido y el borde */
+}
+
+.horario_descripcion
+{
+    color:black;
+    font-size: 22px; 
+    text-align: left;
+}
+   .infotit {
+    font-size: 50 px;
+    justify-self: center;
+  }
+
+  .que_img{
+    height: 400 px;
+    width: 400px;
+  }
+  .como_img{
+    height: 300 px;
+    width: 300px;
+  }
+  .content{
+    display: flex;
+    justify-content: space-between;
+  align-items: flex-start;
+  grid-gap: 30px;
+  }
+ }
+  
+
+

@@ -1,0 +1,61 @@
+/*Este es el css central, todos los archivos html van a inmportarlo  */
+
+/* El asterisco se usa para indicar que se van a alterar todos los componentes */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html es la etiqueta raíz. */
+html{
+    font-size: 62.5%;
+    background-color: #EAEAEA;
+}
+.blueButton{
+    min-width: 180px;
+    min-height: 44px;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #010A3A;
+    color:#FFFFFF;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    background-color: #070707;
+}
+
+.footerSection{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footerSection:nth-child(1){
+    margin-top: 12px;
+}
+footer h3:last-child{
+    margin-bottom: 12px;
+}
+.footerTitle{
+    font-family: sans-serif;
+    color: #EAE4E4;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+.footerNav li{
+    font-family: sans-serif;
+    color: #A69D9D;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    list-style: none;
+}
+
