@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Información - Optiaware</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Aprende a cuidar tu visión con ejercicios contra la fatiga visual. Con Optiaware puedes lograrlo.">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/preguntas.css">
+</head>
+
+<body>
+ <header>
+    <nav class="headerNav">
+        <ul>
+            <li class="headerNav__li"><a href="home.html">Inicio</a></li>
+            <li class="headerNav__li"><a href="registro.html">Registrarse</a></li>
+            <li class="headerNav__li"><a href="Ingresar.html">Ingresar</a></li>
+            <li class="headerNav__li"><a href="informacion.html">Información</a></li>
+            <li class="headerNav__li"><a href="preguntas.html">Cuestionario</a></li>
+            <li class="headerNav__li"><a href="ejercicios.html">Ejercicios</a></li>
+            <li class="headerNav__li"><a href="">Nosotros</a></li>
+        </ul>
+    </nav>
+    <button class="menuButton"></button>
+    <div id="resultadoEvaluacion"></div> 
+    <h1 class="htitle">Test Visual</h1>
+</header> 
+
+<main>
+   <!-- Agregar el link a donde se mandaran las respuestas. -->
+    <form id="cuestionarioForm" onsubmit="return evaluarRespuestas(event)">
+      <!-- Las preguntas se generarán dinámicamente aquí -->
+      <div class="preguntasContainer">
+        <!-- Las preguntas se generarán dinámicamente aquí -->
+      </div>
+  </form>
+  <div id="resultadoEvaluacion"></div> 
+      </main>
+      <footer>
+        <section class="footerSection">
+            <h3 class="footerTitle">Sitio</h3>
+            <nav class="footerNav">
+                <ul>
+                    <li>Inicio</li>
+                    <li>Registrarse</li>
+                    <li>Ingresar</li>
+                    <li>Cuestionario</li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footerSection">
+            <h3 class="footerTitle">Aprende más</h3>
+            <nav class="footerNav">
+                <ul>
+                    <li>Información</li>
+                    <li>Nosotros</li>
+                    <li>Contacto</li>              
+                </ul>
+            </nav>
+        </section>
+        <h3 class="footerTitle">Optiaware inc.</h3>
+    </footer>
+    <script src="respuesta.js"></script>
+  </body>
+</html>
