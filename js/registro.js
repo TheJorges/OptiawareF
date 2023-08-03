@@ -1,6 +1,5 @@
 document.getElementById("registrar").addEventListener("click", async function (event) {
     event.preventDefault();
-    alert("Enviado");
 
     const Name= document.getElementById('Name').value;
     const LastName = document.getElementById( 'LastName').value;
@@ -22,6 +21,7 @@ document.getElementById("registrar").addEventListener("click", async function (e
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
+            
         });
     
 
@@ -31,8 +31,10 @@ document.getElementById("registrar").addEventListener("click", async function (e
 
         const responseData = await response.json();
         console.log('Respuesta del servidor:', responseData);
+        alert("Enviado");
         // Aquí puedes realizar acciones adicionales con la respuesta del servidor.
     } catch (error) {
         console.error('Error:', error.message);
     }
 });
+
