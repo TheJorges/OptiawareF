@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/ingresar.css">
+        <script src="js/ingresar.js" defer></script>
     </head>
 
     <body>
@@ -18,12 +19,11 @@
                     <li class="headerNav__li"><a href="registro.html">Registrarse</a></li>
                     <li class="headerNav__li"><a href="Ingresar.html">Ingresar</a></li>
                     <li class="headerNav__li"><a href="informacion.html">Información</a></li>
-                    <li class="headerNav__li"><a href="cuestionario.html">Cuestionario</a></li>
+                    <li class="headerNav__li"><a href="">Cuestionario</a></li>
                     <li class="headerNav__li"><a href="ejercicios.html">Ejercicios</a></li>
-                    <li class="headerNav__li"><a href="nosotros.html">Nosotros</a></li>
+                    <li class="headerNav__li"><a href="">Nosotros</a></li>
                 </ul>
             </nav>
-            <button class="menuButton"></button>
             <h1 class="htitle">Iniciar Sesión</h1>
         </header>
 
@@ -37,34 +37,32 @@
                 align-items: center;
             }
     
-            input[type="email"],
-            input[type="password"]{
+            input[type="Email"],
+            input[type="Password"]{
                 width: 300px;
                 padding: 10px;
                 margin-bottom: 10px;
             }
         </style>
             <form>
-                <h2 for="email">Correo electrónico:</h2><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <h2 for="password">Contraseña:</h2><br>
-                <input type="password" id="password" name="password" required><br><br>
-                <button class="blueButton">Iniciar sesión</button> 
+                <h2 for="Email">Correo electrónico:</h2><br>
+                <input type="Email" id="Email" name="Email" required title="Email"><br><br>
+                <h2 for="Password">Contraseña:</h2><br>
+                <input type="Password" id="Password" name="Password" required title="Email"><br><br>
+                <button type="button" id="ingreso" class="blueButton">Iniciar sesión</button> 
             </form>
         </div>
         </main>
 
-        <footer>
+    <footer>
             <section class="footerSection">
                 <h3 class="footerTitle">Sitio</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li><a  class="footerNav__li" href="home.html">Inicio</a></li>
-                        <li><a  class="footerNav__li" href="registro.html"> Registrarse</li >
-                        <li><a  class="footerNav__li" href="ingresar.html"> Ingresar</a></li>
-                        <li><a  class="footerNav__li" href="cuestionario.html"> Cuestionario</a></li>
-                        <li><a  class="footerNav__li" href="ejercicios.html"> Ejercicios</a></li>
-                        
+                        <li>Inicio</li>
+                        <li>Registrarse</li>
+                        <li>Ingresar</li>
+                        <li>Cuestionario</li>
                     </ul>
                 </nav>
             </section>
@@ -72,13 +70,14 @@
                 <h3 class="footerTitle">Aprende más</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li><a  class="footerNav__li" href="informacion.html">Información</a> </li>
-                        <li><a  class="footerNav__li" href="nosotros.html"> Nosotros</a></li>              
+                        <li>Información</li>
+                        <li>Nosotros</li>
+                        <li>Contacto</li>              
                     </ul>
                 </nav>
             </section>
             <h3 class="footerTitle">Optiaware inc.</h3>
-        </footer>
+    </footer>
     </body>
 
 </html>

@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/registro.css">
+        <script src="js/registro.js" defer></script>
     </head>
 
     <body>
@@ -16,50 +17,49 @@
                 <ul>
                     <li class="headerNav__li"><a href="home.html">Inicio</a></li>
                     <li class="headerNav__li"><a href="registro.html">Registrarse</a></li>
-                    <li class="headerNav__li"><a href="ingresar.html">Ingresar</a></li>
+                    <li class="headerNav__li"><a href="Ingresar.html">Ingresar</a></li>
                     <li class="headerNav__li"><a href="informacion.html">Información</a></li>
-                    <li class="headerNav__li"><a href="cuestionario.html">Cuestionario</a></li>
+                    <li class="headerNav__li"><a href="">Cuestionario</a></li>
                     <li class="headerNav__li"><a href="ejercicios.html">Ejercicios</a></li>
-                    <li class="headerNav__li"><a href="nosotros.html">Nosotros</a></li>
+                    <li class="headerNav__li"><a href="">Nosotros</a></li>
                 </ul>
             </nav>
-            <button class="menuButton"></button>
             <h1 class="htitle">Registro</h1>
         </header>
 
         <main>
             <div class="container">
                 <form>
-                    <h2 for="nombre">Nombres</h2><br>
-                    <input type="nombre" id="nombre" name="nombre" required><br><br>
-                    <h2 for="apellido">Apellidos</h2><br>
-                    <input type="apellido" id="apellido" name="apellido" required><br><br>
-                    <h2 for="email">Correo electrónico</h2><br>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <h2 for="contraseña">Contraseña</h2><br>
-                    <input type="contraseña" id="contraseña" name="contraseña" required><br><br>
-                    <button class="blueButton">Registrarse</button> 
+                    <h2 for="Name">Nombres</h2><br>
+                    <input type="Name" id="Name" required title="Name"><br><br>
+                    <h2 for="LastName">Apellidos</h2><br>
+                    <input type="LastName" id="LastName"required title="LastName"><br><br>
+                    <h2 for="Email">Correo electrónico</h2><br>
+                    <input type="Email" id="Email" required title="Email"><br><br>
+                    <h2 for="Password">Contraseña</h2><br>
+                    <input type="Password" id="Password" required title="Password"><br><br>
+                    <button type="button" id="registrar" class="blueButton">Registrarse</button> 
                   </form>
-                <style>
-                    form {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-                    input {
-                        width: 200px;
-                        padding: 10px;
-                        border: 1px solid #ccc;
-                    }
-                    input[type="nombre"],
-                    input[type="apellido"],
-                    input[type="email"],
-                    input[type="contraseña"] {
-                        width: 300px;
-                        padding: 10px;
-                        margin-bottom: 10px;
-                    }
-                </style>
+                    <style>
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        input {
+                            width: 200px;
+                            padding: 10px;
+                            border: 1px solid #ccc;
+                        }
+                        input[type="Name"],
+                        input[type="LastName"],
+                        input[type="Email"],
+                        input[type="Password"] {
+                            width: 300px;
+                            padding: 10px;
+                            margin-bottom: 10px;
+                        }
+                    </style>
             </div>
         </main>
         <footer>
@@ -67,12 +67,10 @@
                 <h3 class="footerTitle">Sitio</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li><a  class="footerNav__li" href="home.html">Inicio</a></li>
-                        <li><a  class="footerNav__li" href="registro.html"> Registrarse</li >
-                        <li><a  class="footerNav__li" href="ingresar.html"> Ingresar</a></li>
-                        <li><a  class="footerNav__li" href="cuestionario.html"> Cuestionario</a></li>
-                        <li><a  class="footerNav__li" href="ejercicios.html"> Ejercicios</a></li>
-                        
+                        <li>Inicio</li>
+                        <li>Registrarse</li>
+                        <li>Ingresar</li>
+                        <li>Cuestionario</li>
                     </ul>
                 </nav>
             </section>
@@ -80,8 +78,9 @@
                 <h3 class="footerTitle">Aprende más</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li><a  class="footerNav__li" href="informacion.html">Información</a> </li>
-                        <li><a  class="footerNav__li" href="nosotros.html"> Nosotros</a></li>              
+                        <li>Información</li>
+                        <li>Nosotros</li>
+                        <li>Contacto</li>              
                     </ul>
                 </nav>
             </section>
