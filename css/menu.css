@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html es la etiqueta raíz. */
+html{
+    font-size: 62.5%;
+    background-color: #EAEAEA;
+}
+
+.menuItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.menuItem{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    height: 44px;
+    width: 100%;
+    text-align: center;
+    line-height: 44px;
+    background-color: #EAEAEA;
+    border:0;
+    border-top: 1px solid #070707;
+    border-bottom: 0;
+    text-decoration: none;
+    color: #070707;
+}

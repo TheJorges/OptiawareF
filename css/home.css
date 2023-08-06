@@ -154,68 +154,14 @@ section.graySection{
 .graySection.exercises .exercises__image{
     background-image: url('../resources/images/blinkywoman25.png');
 }
-/* @media(min-width:744px) {
-    header{
-        height: 250px;
-    }
-    header .headerNav{
-        display:block;
-
-        grid-column: 1 / 9;
-        margin-top: 15px;
-        font-family: sans-serif;
-    }
-    header .headerNav ul{
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        font-size: 1.2rem;
-    }
-    header .headerNav li{
-        list-style: none;
-    }
-    header .headerNav a{
-        text-decoration: none;
-        color: #EAE4E4;
-    }
-    header .menuButton{
-        display: none;
-    }
-    header .logo{
-        position: relative;
-        top: 5px;
-    }
-    header h1.htitle{
-        position: relative;
-        bottom: 5px;
-    }
-    header h2.hsubtitle{
-        position: relative;
-        bottom: 5px;
-    }
-    .homeContent{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 1115px;
-        justify-content: center;
-        background-color: #EAEAEA;
-        margin: 0 auto;
-    }
-    section.graySection{
-        background-color: #EAEAEA;
-        border-bottom: 0px;
-        
-        min-width: 372px;
-        padding: 24px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-    .graySection.test p{
-        margin-bottom: 26px;
-    }
-} */
+.blueButton{
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 44px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+/* git  */
 @media(min-width:744px) {
     header{
         height: 400px;
