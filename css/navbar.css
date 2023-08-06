@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html es la etiqueta raíz. */
+html{
+    font-size: 62.5%;
+    background-color: #EAEAEA;
+}
+header{
+    background-color: #070707;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header .menuButton{
+    display: none;
+}
+.headerNav__logo{
+    background-image: url(../resources/icons/logo.svg);
+    width: 59px;
+    height: 34px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 30px;
+    margin-left: 10px;
+    
+}
+nav li{
+    list-style: none;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
+
+.headerNav ul {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerNav__li{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.headerRegNav{
+    position: absolute;
+    right: 10px;
+}
+.headerRegNav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerRegNav__li:first-child{
+    background-color: #010A3A;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    width: 110px;
+    text-align: center;
+}
+.headerRegNav__li:nth-child(2){
+    border: 1px solid #EAEAEA;
+    border-radius: .2em;
+    padding: 10px 10px ;
+    width: 110px;
+    text-align: center;
+    font-weight: bold;
+
+}
+.headerNav a{
+    text-decoration: none;
+    color: #EAEAEA;
+}
+.headerRegNav a{
+    text-decoration: none;
+    color: #EAEAEA;
+}
+@media(max-width:825px){
+    .headerRegNav{
+        display: none;
+    }
+    .headerNav{
+        display: none;
+    }
+    header .menuButton{
+        display: inline-block;
+        background-image: url(../resources/icons/menu.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        right: 10px;
+    }
+}

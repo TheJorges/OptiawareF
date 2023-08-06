@@ -154,7 +154,7 @@ section.graySection{
 .graySection.exercises .exercises__image{
     background-image: url('../resources/images/blinkywoman25.png');
 }
-@media(min-width:10px) {
+/* @media(min-width:744px) {
     header{
         height: 250px;
     }
@@ -215,7 +215,7 @@ section.graySection{
     .graySection.test p{
         margin-bottom: 26px;
     }
-}
+} */
 @media(min-width:744px) {
     header{
         height: 400px;
