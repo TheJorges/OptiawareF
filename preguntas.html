@@ -7,46 +7,52 @@
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/preguntas.css">
 </head>
 
 <body>
  <header>
+    <a href="home.html" class="headerNav__logo"></a>
     <nav class="headerNav">
         <ul>
             <li class="headerNav__li"><a href="home.html">Inicio</a></li>
-            <li class="headerNav__li"><a href="registro.html">Registrarse</a></li>
-            <li class="headerNav__li"><a href="Ingresar.html">Ingresar</a></li>
             <li class="headerNav__li"><a href="informacion.html">Información</a></li>
             <li class="headerNav__li"><a href="preguntas.html">Cuestionario</a></li>
             <li class="headerNav__li"><a href="ejercicios.html">Ejercicios</a></li>
             <li class="headerNav__li"><a href="nosotros.html">Nosotros</a></li>
         </ul>
     </nav>
-    <button class="menuButton"></button>
-    <div id="resultadoEvaluacion"></div> 
-    <h1 class="htitle">Test Visual</h1>
+    <nav class="headerRegNav">
+        <ul>
+
+            <li class="headerRegNav__li"><a href="registro.html">Registrarse</a></li>
+            <li class="headerRegNav__li"><a href="ingresar.html">Ingresar</a></li>
+        </ul>
+    </nav>
+    <a href="menu.html" class="menuButton"></a>
 </header> 
 
 <main>
    <!-- Agregar el link a donde se mandaran las respuestas. -->
-    <form id="cuestionarioForm" onsubmit="return evaluarRespuestas(event)">
+    <form id="cuestionarioForm">
       <!-- Las preguntas se generarán dinámicamente aquí -->
       <div class="preguntasContainer">
         <!-- Las preguntas se generarán dinámicamente aquí -->
       </div>
   </form>
-  <div id="resultadoEvaluacion"></div> 
       </main>
+
       <footer>
         <section class="footerSection">
             <h3 class="footerTitle">Sitio</h3>
             <nav class="footerNav">
                 <ul>
-                    <li>Inicio</li>
-                    <li>Registrarse</li>
-                    <li>Ingresar</li>
-                    <li>Cuestionario</li>
+                    <li><a  class="footerNav__li" href="home.html">Inicio</a></li>
+                    <li><a  class="footerNav__li" href="registro.html"> Registrarse</li >
+                    <li><a  class="footerNav__li" href="ingresar.html"> Ingresar</a></li>
+                    <li><a  class="footerNav__li" href="cuestionario.html"> Cuestionario</a></li>
+                    <li><a  class="footerNav__li" href="ejercicios.html"> Ejercicios</a></li>
                 </ul>
             </nav>
         </section>
@@ -54,14 +60,13 @@
             <h3 class="footerTitle">Aprende más</h3>
             <nav class="footerNav">
                 <ul>
-                    <li>Información</li>
-                    <li>Nosotros</li>
-                    <li>Contacto</li>              
+                    <li><a  class="footerNav__li" href="informacion.html">Información</a> </li>
+                    <li><a  class="footerNav__li" href="nosotros.html"> Nosotros</a></li>              
                 </ul>
             </nav>
         </section>
         <h3 class="footerTitle">Optiaware inc.</h3>
     </footer>
-    <script src="respuesta.js"></script>
+    <script src="js/respuesta.js"></script>
   </body>
 </html>
