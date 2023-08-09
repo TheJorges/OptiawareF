@@ -1,0 +1,212 @@
+
+
+
+section.graySection{
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #DADADA;
+    min-height: 120px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+
+.graySection h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #252525;
+    text-align: center;
+
+}
+.graySection p{
+    text-align: center;
+    font-size: 1.6rem;  
+    font-family: sans-serif;
+    margin:0 auto;
+
+    color: #3F3F3F;
+    line-height: 2.4rem;
+    max-width: 350px;
+}
+
+.graySection.test
+{
+    height: 360px;
+   
+}
+
+@media(min-width:10px) { 
+
+   
+    .homeContent{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1115px;
+        justify-content: center;
+        background-color: #EAEAEA;
+        margin: 0 auto;
+    }
+    section.graySection{
+        background-color: #EAEAEA;
+        border-bottom: 0px;
+        
+        min-width: 372px;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .graySection.test p{
+        margin-bottom: 26px;
+    }
+    #cuestionarioForm{
+        font-size: 16px;
+        color: #000000;
+        max-width: 600px; /* Ajusta el ancho según tus necesidades */
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #c2b9b9;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column; /* Cambiamos la dirección de los elementos a columna */
+        align-items: center;
+    }
+      
+      /* Estilos para el botón Enviar */
+      .enviarButtonContainer {
+        display: flex;
+        justify-content: center;  
+    }
+      
+      .enviarButton {
+        background-color: #4f6882;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    
+      .enviarButton:hover {
+        background-color: #0052cc; /* Puedes ajustar este color para hacerlo más claro en hover */
+      }
+    
+}
+
+@media(min-width:744px) {
+    .homeContent{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1115px;
+        justify-content: center;
+        background-color: #EAEAEA;
+        margin: 0 auto;
+    }
+    section.graySection{
+        background-color: #EAEAEA;
+        border-bottom: 0px;
+        
+        min-width: 372px;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .graySection.test p{
+        margin-bottom: 26px;
+    }
+
+    
+/* Estilos para el mensaje de resultado */
+#cuestionarioForm{
+    font-size: 22px;
+    color: #000000;
+    max-width: 600px; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #c2b9b9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección de los elementos a columna */
+    align-items: center;
+}
+  
+  /* Estilos para el botón Enviar */
+  .enviarButtonContainer {
+    display: flex;
+    justify-content: center;  
+}
+  
+  .enviarButton {
+    background-color: #4f6882;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .enviarButton:hover {
+    background-color: #0052cc; /* Puedes ajustar este color para hacerlo más claro en hover */
+  }
+
+        
+}
+
+
+
+@media(min-width:1024px){
+   
+    .homeContent{
+        column-gap: 100px;
+        row-gap: 50px;
+    }
+
+/* Estilos para el mensaje de resultado */
+#cuestionarioForm{
+    font-size: 22px;
+    color: #000000;
+    max-width: 600px; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #c2b9b9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección de los elementos a columna */
+    align-items: center;
+}
+
+  /* Estilos para el botón Enviar */
+  .enviarButtonContainer {
+    display: flex;
+    justify-content: center;  
+}
+  
+  .enviarButton {
+    background-color: #4f6882;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .enviarButton:hover {
+    background-color: #0052cc; /* Puedes ajustar este color para hacerlo más claro en hover */
+  }
+
+}
