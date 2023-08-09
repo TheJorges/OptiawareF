@@ -34,7 +34,7 @@ const apiUrl1 = 'https://dev-api.optiaware.com/api/UserResponses'; // Reemplaza 
       } else {
         console.log('La API tiene valores.');
         // Si tiene valores, redirigir a otra página
-       window.location.href = 'resultados.html'; // Reemplaza con la URL de la página a la que quieres redirigir     
+       window.location.href = 'respuestas.html'; // Reemplaza con la URL de la página a la que quieres redirigir     
       }
     })
     .catch(error => {
