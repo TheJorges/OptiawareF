@@ -6,9 +6,12 @@
         <meta name="description" content="Aprende a cuidar tu visión con ejercicios contra la fatiga visual. Con Optiaware puedes lograrlo.">
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="css/ingresar.css">
+        <link rel="stylesheet" href="resources/libs/cute-alert/style.css">
+
         <script src="js/ingresar.js" defer></script>
     </head>
 
@@ -27,13 +30,15 @@
                     <li class="headerNav__li"><a href="nosotros.html">Nosotros</a></li>
                 </ul>
             </nav>
-            <nav class="headerRegNav">
+            <nav class="headerRegNav" id="headerRegNav">
                 <ul>
                 
                     <li class="headerRegNav__li"><a href="registro.html">Registrarse</a></li>
                     <li class="headerRegNav__li"><a href="ingresar.html">Ingresar</a></li>
                 </ul>
             </nav>
+            <button class="logoutButton" id="logoutButton" onclick="logout()">Cerrar sesión</button>
+
             <a href="menu.html" class="menuButton"></a>
  
         </header>
@@ -45,34 +50,38 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 100%;
             }
     
             input[type="Email"],
             input[type="Password"]{
+                
+                max-width: 90%;
                 width: 300px;
                 padding: 10px;
                 margin-bottom: 10px;
             }
         </style>
             <form>
-                <h2 for="Email">Correo electrónico:</h2><br>
-                <input type="Email" id="Email" name="Email" required title="Email"><br><br>
-                <h2 for="Password">Contraseña:</h2><br>
-                <input type="Password" id="Password" name="Password" required title="Email"><br><br>
+                <h2 for="Email" class="emailInput">Correo electrónico:</h2><br>
+                <input class="textbox" type="Email" id="Email" name="Email" required title="Email"><br><br>
+                <h2 for="Password" class="passwordInput">Contraseña:</h2><br>
+                <input class="textbox" type="Password" id="Password" name="Password" required title="Email"><br><br>
                 <button type="button" id="ingreso" class="blueButton">Iniciar sesión</button> 
             </form>
         </div>
         </main>
 
-    <footer>
+        <footer>
             <section class="footerSection">
                 <h3 class="footerTitle">Sitio</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li>Inicio</li>
-                        <li>Registrarse</li>
-                        <li>Ingresar</li>
-                        <li>Cuestionario</li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="home.html">Inicio</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="registro.html"> Registrarse</li >
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ingresar.html"> Ingresar</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="preguntas.html"> Cuestionario</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ejercicios.html"> Ejercicios</a></li>
                     </ul>
                 </nav>
             </section>
@@ -80,14 +89,15 @@
                 <h3 class="footerTitle">Aprende más</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li>Información</li>
-                        <li>Nosotros</li>
-                        <li>Contacto</li>              
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="informacion.html">Información</a> </li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="nosotros.html"> Nosotros</a></li>              
                     </ul>
                 </nav>
             </section>
-            <h3 class="footerTitle">Optiaware inc.</h3>
-    </footer>
+            <h3 class="footerTitle">Optiaware</h3>
+        </footer>
+    <script src="js/navbar.js"></script>
+    <script src="resources/libs/cute-alert/cute-alert.js"></script>
     </body>
 
 </html>

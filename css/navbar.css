@@ -17,6 +17,9 @@ header{
     justify-content: flex-start;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+
 }
 header .menuButton{
     display: none;
@@ -86,6 +89,16 @@ nav li{
     text-decoration: none;
     color: #EAEAEA;
 }
+.logoutButton{
+    background-color: #070707;
+    color: #EAEAEA;
+    font-size: 1.6rem;
+    border: 1px solid #EAEAEA;
+    padding: 10px 10px;
+    border-radius: .2em;
+    position:absolute;
+    right: 10px;
+}
 @media(max-width:825px){
     .headerRegNav{
         display: none;
@@ -102,5 +115,8 @@ nav li{
         height: 36px;
         position: absolute;
         right: 10px;
+    }
+    .logoutButton{
+        display: none !important;
     }
 }

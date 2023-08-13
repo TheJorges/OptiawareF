@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/respuestas.css">
         <link rel="stylesheet" href="css/navbar.css">
-        <script src="js/respuestas.js" defer></script>
+
     </head>
 
     <body>
@@ -28,20 +28,20 @@
                         <li class="headerNav__li"><a href="nosotros.html">Nosotros</a></li>
                     </ul>
                  </nav>
-                <nav class="headerRegNav">
+                <nav class="headerRegNav" id="headerRegNav">
                     <ul>
                 
                         <li class="headerRegNav__li"><a href="registro.html">Registrarse</a></li>
                         <li class="headerRegNav__li"><a href="ingresar.html">Ingresar</a></li>
                     </ul>
                 </nav>
+                <button class="logoutButton" id="logoutButton" onclick="logout()">Cerrar sesión</button>
             <a href="menu.html" class="menuButton"></a>
-            <h1>Respuestas</h1>
         </header>
 
         <main>
             <div class="container">
-                <h1 for="Label">Tu porcentaje</h1><br>
+                <h1 for="Label" class="resultsTitle">Resutados</h1><br>
                 <div class="clearfix">
 
                     <div id="statusBar" class="c100 p100 big center">
@@ -52,19 +52,38 @@
                         </div>
                     </div>
                 </div>
-                <button type="button"  id="responder" class="blueButton">Volver a responder</button> 
 
+                <div class="detailsContainer">
+                    
+                    <div class="detailsRow">
+                        <p class="detailsTitle" >Conclusiones</p>
+                        <p class="detailsValue" id="resultValue">Presentas síntomas de fatiga visual, acude a tu oftalmólogo para recibir una valoración profesional.</p>
+                    </div>
+                    <div class="detailsRow">
+                        <p class="detailsTitle">Nombre</p>
+                        <p class="detailsValue" id="nameValue">Luis Cruz</p>
+                    </div>
+                    <div class="detailsRow">
+                        <p class="detailsTitle" >Fecha de registro</p>
+                        <p class="detailsValue" id="dateValue">20/05/2001</p>
+                    </div>
+                </div>
+                <button type="button"  id="responder" class="blueButton answerButton">Volver a responder</button> 
+                <a class="excercisesButton" href="ejercicios.html">Ver ejercicios</a> 
             </div>
+
+
         </main>
         <footer>
             <section class="footerSection">
                 <h3 class="footerTitle">Sitio</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li>Inicio</li>
-                        <li>Registrarse</li>
-                        <li>Ingresar</li>
-                        <li>Cuestionario</li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="home.html">Inicio</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="registro.html"> Registrarse</li >
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ingresar.html"> Ingresar</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="preguntas.html"> Cuestionario</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ejercicios.html"> Ejercicios</a></li>
                     </ul>
                 </nav>
             </section>
@@ -72,15 +91,16 @@
                 <h3 class="footerTitle">Aprende más</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li>Información</li>
-                        <li>Nosotros</li>
-                        <li>Contacto</li>              
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="informacion.html">Información</a> </li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="nosotros.html"> Nosotros</a></li>              
                     </ul>
                 </nav>
             </section>
-            <h3 class="footerTitle">Optiaware inc.</h3>
+            <h3 class="footerTitle">Optiaware</h3>
         </footer>
+        <script src="js/navbar.js"></script>
+        <script src="js/respuestas.js" defer></script>
     </body>
 
-</html>
+</html> 
 

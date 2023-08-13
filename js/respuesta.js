@@ -1,5 +1,7 @@
 // Obtener el token almacenado en el Local Storage
 const token = localStorage.getItem('token');   
+if(!token)
+  window.location.href= 'ingresar.html';
 const botonPresionado = localStorage.getItem("botonPresionado");
 
 
@@ -23,12 +25,24 @@ const apiUrl1 = 'https://dev-api.optiaware.com/api/UserResponses'; // Reemplaza 
       return response.json(); // Convertir la respuesta en formato JSON
     })
     .then(data => {
-      // Aquí puedes trabajar con los datos obtenidos de la API
-      console.log('Respuesta de la API:', data);
+
       // Verificar si la respuesta contiene valores
       if (Object.keys(data).length === 0 || botonPresionado === "true") {
         localStorage.setItem("botonPresionado", "false");
-        console.log('La API no tiene valores o el botón fue presionado en la otra página.');
+        let urlString = window.location.search;
+        let params = new URLSearchParams(urlString);
+
+        if(params.get('fromlogin'))
+        {
+          cuteToast({
+            type: 'info',
+            title:'¡Has ingresado correctamente!',
+            message:'Puedes realizar nuestro test.',
+            timer:3000,
+          
+          });
+        }
+
         // Si no tiene valores, llamar a los demás métodos para mostrar preguntas, etc.
         Pruebas();
       } else {
@@ -100,17 +114,21 @@ function generarPreguntas(data, responses) {
   let contador = 1;
   const cuestionarioForm = document.getElementById("cuestionarioForm");
   const arrayRespuestas = Object.values(responses);
+
   data.forEach(pregunta => {
     const divPregunta = document.createElement("div");
     divPregunta.classList.add("pregunta");
 
     const preguntaTexto = document.createElement("span");
-    preguntaTexto.innerHTML = `<strong>${contador}.- ${pregunta.Value}</strong><br>`;
+    preguntaTexto.classList = 'questionElement';
+    preguntaTexto.innerHTML = `${contador}.- ${pregunta.Value}`;
     divPregunta.appendChild(preguntaTexto);
 
     arrayRespuestas.forEach((respuesta, index) => {
       const label = document.createElement("label");
-      label.innerHTML = `<input type="radio" name="pregunta${contador}" value="${index}" /> ${respuesta}<br>`;
+      label.classList = 'labelElement';
+      label.innerHTML = `<input class='inputElement' type="radio" name="pregunta${contador}" value="${index}" > ${respuesta} </input> <br/>`;
+      label.addEventListener("click", (event)=>{setSelectedOption(event)});
       divPregunta.appendChild(label);
     });
 
@@ -131,19 +149,19 @@ function generarBoton() {
   enviarButton.type = "submit";
   enviarButton.value = "Enviar";
   enviarButton.classList.add("enviarButton");
-
+  enviarButton.classList.add("blueButton");
   enviarButtonContainer.appendChild(enviarButton);
 
   const cuestionarioForm = document.getElementById("cuestionarioForm");
   cuestionarioForm.appendChild(enviarButtonContainer);
 
   // Asignamos el evento click al botón para llamar a la función evaluarRespuestas
-  enviarButton.addEventListener("click", evaluarRespuestas);
+  enviarButton.addEventListener("click", (event)=>{evaluarRespuestas(event);});
 }
 
 
 
-function evaluarRespuestas() {
+function evaluarRespuestas(event) {
 
   const cuestionarioForm = document.getElementById("cuestionarioForm");
   const preguntas = Array.from(cuestionarioForm.getElementsByClassName("pregunta"));
@@ -156,8 +174,13 @@ function evaluarRespuestas() {
 
   // Validar que todas las preguntas tengan una respuesta seleccionada
   if (respuestasSeleccionadas.includes(null)) {
-    alert("Por favor, responde todas las preguntas antes de enviar el cuestionario.");
-    return;
+    event.preventDefault();
+    cuteAlert({
+      type: 'error',
+      title: 'Datos incompletos',
+      message:'Por favor, responde todas las preguntas antes de enviar el cuestionario.'
+    }).then((a)=>{return;});
+
   }
 console.log(respuestasSeleccionadas);
  const preguntasRespondidasStrings = preguntasRespondidas.map(String);
@@ -198,4 +221,17 @@ console.log(responses);
   .catch(error => {
     console.error('Error:', error);
   });
+}
+
+function setSelectedOption(event){
+  let labels = document.querySelectorAll('.labelElement');
+  console.log(labels);
+   labels.forEach(label=>{
+    if(label.parentElement == event.target.labels[0].parentElement)
+      label.classList.remove('checked');
+   });
+
+
+  event.target.labels[0].classList= 'labelElement checked' ;
+
 }

@@ -1,10 +1,16 @@
 
 /* Mi codigo para la pagina*/
-
+.inputLabel{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.textbox{
+    border-radius: .5em;
+}
 
     
 /* Mi codigo para la pagina*/
-div {
+div.container {
     display:grid;
     place-items:center;
     grid-template-columns:
@@ -61,7 +67,7 @@ h1{
 
     
 /* Mi codigo para la pagina*/
-div {
+div.container {
     display:grid;
     place-items:center;
     grid-template-columns:

@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/registro.css">
         <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="css/circle.css">
+        <link rel="stylesheet" href="resources/libs/cute-alert/style.css">
         <script src="js/registro.js" defer></script>
     </head>
 
@@ -28,27 +29,29 @@
                     <li class="headerNav__li"><a href="nosotros.html">Nosotros</a></li>
                 </ul>
             </nav>
-            <nav class="headerRegNav">
+            <nav class="headerRegNav" id="headerRegNav">
                 <ul>
                 
                     <li class="headerRegNav__li"><a href="registro.html">Registrarse</a></li>
                     <li class="headerRegNav__li"><a href="ingresar.html">Ingresar</a></li>
                 </ul>
             </nav>
+            <button class="logoutButton" id="logoutButton" onclick="logout()">Cerrar sesión</button>
+
             <a href="menu.html" class="menuButton"></a>
         </header>
 
         <main>
             <div class="container">
                 <form>
-                    <h2 for="Name">Nombres</h2><br>
-                    <input type="Name" id="Name" required title="Name"><br><br>
-                    <h2 for="LastName">Apellidos</h2><br>
-                    <input type="LastName" id="LastName"required title="LastName"><br><br>
-                    <h2 for="Email">Correo electrónico</h2><br>
-                    <input type="Email" id="Email" required title="Email"><br><br>
-                    <h2 for="Password">Contraseña</h2><br>
-                    <input type="Password" id="Password" required title="Password"><br><br>
+                    <h2 class="inputLabel" for="Name">Nombres</h2><br>
+                    <input  type="Name" class="textbox" id="Name" required title="Name"><br><br>
+                    <h2 class="inputLabel" for="LastName">Apellidos</h2><br>
+                    <input class="textbox" type="LastName" id="LastName"required title="LastName"><br><br>
+                    <h2 class="inputLabel"  for="Email">Correo electrónico</h2><br>
+                    <input type="Email" class="textbox" id="Email" required title="Email"><br><br>
+                    <h2 class="inputLabel"  for="Password">Contraseña</h2><br>
+                    <input type="Password" class="textbox" id="Password" required title="Password"><br><br>
                     <button type="button" id="registrar" class="blueButton">Registrarse</button> 
                   </form>
                     <style>
@@ -78,10 +81,11 @@
                 <h3 class="footerTitle">Sitio</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li>Inicio</li>
-                        <li>Registrarse</li>
-                        <li>Ingresar</li>
-                        <li>Cuestionario</li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="home.html">Inicio</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="registro.html"> Registrarse</li >
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ingresar.html"> Ingresar</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="preguntas.html"> Cuestionario</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ejercicios.html"> Ejercicios</a></li>
                     </ul>
                 </nav>
             </section>
@@ -89,14 +93,15 @@
                 <h3 class="footerTitle">Aprende más</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li>Información</li>
-                        <li>Nosotros</li>
-                        <li>Contacto</li>              
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="informacion.html">Información</a> </li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="nosotros.html"> Nosotros</a></li>              
                     </ul>
                 </nav>
             </section>
-            <h3 class="footerTitle">Optiaware inc.</h3>
+            <h3 class="footerTitle">Optiaware</h3>
         </footer>
+        <script src="js/navbar.js"></script>
+        <script src="resources/libs/cute-alert/cute-alert.js"></script>
     </body>
 
 </html>

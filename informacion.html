@@ -26,13 +26,15 @@
                     <li class="headerNav__li"><a href="nosotros.html">Nosotros</a></li>
                 </ul>
             </nav>
-            <nav class="headerRegNav">
+            <nav class="headerRegNav" id="headerRegNav">
                 <ul>
                 
                     <li class="headerRegNav__li"><a href="registro.html">Registrarse</a></li>
                     <li class="headerRegNav__li"><a href="ingresar.html">Ingresar</a></li>
                 </ul>
             </nav>
+            <button class="logoutButton" id="logoutButton" onclick="logout()">Cerrar sesión</button>
+
             <a href="menu.html" class="menuButton"></a>
  
         </header>
@@ -83,16 +85,16 @@
            </div>
         </main>
 
-         <footer>
+        <footer>
             <section class="footerSection">
                 <h3 class="footerTitle">Sitio</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li><a  class="footerNav__li" href="home.html">Inicio</a></li>
-                        <li><a  class="footerNav__li" href="registro.html"> Registrarse</li >
-                        <li><a  class="footerNav__li" href="ingresar.html"> Ingresar</a></li>
-                        <li><a  class="footerNav__li" href="cuestionario.html"> Cuestionario</a></li>
-                        <li><a  class="footerNav__li" href="ejercicios.html"> Ejercicios</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="home.html">Inicio</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="registro.html"> Registrarse</li >
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ingresar.html"> Ingresar</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="preguntas.html"> Cuestionario</a></li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="ejercicios.html"> Ejercicios</a></li>
                     </ul>
                 </nav>
             </section>
@@ -100,13 +102,14 @@
                 <h3 class="footerTitle">Aprende más</h3>
                 <nav class="footerNav">
                     <ul>
-                        <li><a  class="footerNav__li" href="informacion.html">Información</a> </li>
-                        <li><a  class="footerNav__li" href="nosotros.html"> Nosotros</a></li>              
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;"  href="informacion.html">Información</a> </li>
+                        <li><a  class="footerNav__li" style="text-decoration: none;color: #A69D9D;" href="nosotros.html"> Nosotros</a></li>              
                     </ul>
                 </nav>
             </section>
-            <h3 class="footerTitle">Optiaware inc.</h3>
+            <h3 class="footerTitle">Optiaware</h3>
         </footer>
+        <script src="js/navbar.js"></script>
     </body>
 
 </html>

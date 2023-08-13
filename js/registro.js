@@ -1,3 +1,7 @@
+if(localStorage.getItem('token')){
+    window.location.href = 'preguntas.html';
+}
+
 document.getElementById("registrar").addEventListener("click", async function (event) {
     event.preventDefault();
 
@@ -26,12 +30,17 @@ document.getElementById("registrar").addEventListener("click", async function (e
     
 
         if (!response.ok) {
+            cuteAlert({
+                type: 'error',
+                title: 'Datos incorrectos',
+                message: 'Asegúrate de introducir tu información de forma correcta. '
+            });
             throw new Error('Error en la solicitud.');
         }
 
         const responseData = await response.json();
         console.log('Respuesta del servidor:', responseData);
-        alert("Enviado");
+        window.location.href= 'ingresar.html?fromRegister=true';
         // Aquí puedes realizar acciones adicionales con la respuesta del servidor.
     } catch (error) {
         console.error('Error:', error.message);

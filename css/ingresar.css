@@ -1,11 +1,25 @@
+div.container{
+    max-width: 90%;
+}
+.emailInput{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.passwordInput{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.textbox{
+    border-radius: .5em;
 
 
+}
 @media(min-width:10px) {
  
     
 /* Mi codigo para la pagina*/
 
-div {
+div.container {
     display:grid;
     place-items:center;
     grid-template-columns:
@@ -85,7 +99,7 @@ h1{
     }
     
 /* Mi codigo para la pagina*/
-div {
+div.container {
     display:grid;
     place-items:center;
     grid-template-columns:
@@ -142,7 +156,7 @@ h1{
 @media(min-width:1024px){
    
 /* Mi codigo para la pagina*/
-div {
+div.container {
     display:grid;
     place-items:center;
     grid-template-columns:
