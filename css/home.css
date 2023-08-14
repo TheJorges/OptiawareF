@@ -216,9 +216,9 @@ section.graySection{
         flex-direction: column;
         gap: 12px;
     }
-    .graySection.test p{
+    /* .graySection.test p{
         margin-bottom: 26px;
-    }
+    } */
 }
 
 @media(min-width:1024px){

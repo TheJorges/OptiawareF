@@ -4,11 +4,12 @@ if(localStorage.getItem('token')){
 
 document.getElementById("registrar").addEventListener("click", async function (event) {
     event.preventDefault();
-
+    const regexPassword= new RegExp("^(?=.*[A-Z])(?=.*[!@#$%^&*()-=_+{}[\\]|;:',\".<>/?])(?=.*[0-9])(?=.{8,512}).*$");
     const Name= document.getElementById('Name').value;
     const LastName = document.getElementById( 'LastName').value;
     const Email = document.getElementById('Email').value;
     const Password = document.getElementById('Password').value;
+    const RepeatPassword = document.getElementById('RepeatPassword').value;
 
     const data = {
         Name: Name,
@@ -17,6 +18,23 @@ document.getElementById("registrar").addEventListener("click", async function (e
         Password: Password
     };
     
+    if(Password !== RepeatPassword){
+        cuteAlert({
+        type:'error',
+        title:'Datos incorrectos',
+        message: 'Las contraseñas no coinciden. '
+    });
+    return;
+    }
+
+    if(!regexPassword.test(Password)){
+        cuteAlert({
+        type:'error',
+        title:'Datos incorrectos',
+        message: 'Verifica que tu contraseña contenga por lo menos 8 dígitos e incluya mayúsculas y números. '
+    });
+    return;
+    }
 
     try {
         const response = await fetch("https://dev-api.optiaware.com/api/Users", {

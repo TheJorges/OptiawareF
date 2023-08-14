@@ -340,57 +340,72 @@
 }
 
 .error-bg {
-  background: #d85261;
+  /* background: #d85261; */
+  background:#010A3A ;
 }
 
 .success-bg {
-  background: #2dd284;
+  /* background: #2dd284; */
+  background:#010A3A ;
 }
 
 .warning-bg {
-  background: #fada5e;
+  /* background: #fada5e; */
+  background:#010A3A ;
 }
 
 .question-bg {
-  background: #779ecb;
+  /* background: #779ecb; */
+  background:#010A3A ;
 }
 
 .error-btn:hover {
-  background: #e5a4b4;
+  /* background: #e5a4b4; */
+  background:rgb(2, 55, 90) ;
 }
 
 .success-btn:hover {
-  background: #6edaa4;
+  /* background: #6edaa4; */
+  background:rgb(2, 55, 90) ;
 }
 
 .warning-btn:hover {
-  background: #fcecae;
+  /* background: #fcecae; */
+  background:rgb(2, 55, 90) ;
 }
 
 .info-btn:hover {
-  background: #c3e6fb;
+  /* background: #c3e6fb; */
+  background:rgb(2, 55, 90) ;
 }
 
 .question-btn:hover {
-  background: #bacee4;
+  /* background: #bacee4; */
+  background:rgb(2, 55, 90) ;
 }
 
 .error-timer {
-  background: #e5a4b4;
+  /* background: #e5a4b4; */
+  background:#010A3A ;
 }
 
 .success-timer {
-  background: #6edaa4;
+  /* background: #6edaa4; */
+  background:#010A3A ;
+
 }
 
 .warning-timer {
-  background: #fcecae;
+  /* background: #fcecae; */
+  background:#010A3A ;
 }
 
 .info-timer {
-  background: #c3e6fb;
+  /* background: #c3e6fb; */
+  background:#010A3A ;
 }
 
 .info-bg {
-  background: #88cef7;
+  /* background: #88cef7; */
+  background:#010A3A ;
 }

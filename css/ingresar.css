@@ -1,9 +1,16 @@
 div.container{
     max-width: 90%;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
 }
 .emailInput{
     font-size: 1.6rem;
     font-family: sans-serif;
+    margin-top:50px ;
 }
 .passwordInput{
     font-size: 1.6rem;
@@ -14,18 +21,36 @@ div.container{
 
 
 }
+.registerAlternative{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.goToRegisterButton{
+    
+        text-decoration: none;
+        text-align: center;
+        line-height: 44px;
+        vertical-align: middle;
+        background-color: #EAEAEA;
+        border: 1px solid gray;
+        width: 180px;
+        height: 44px;
+        border-radius: .2em;
+        font-size: 1.6rem;
+        font-family: sans-serif;
+        color: #023147;
+        margin-bottom: 50px;
+    
+}
 @media(min-width:10px) {
  
     
 /* Mi codigo para la pagina*/
 
 div.container {
-    display:grid;
+
     place-items:center;
-    grid-template-columns:
-    repeat( auto-fit,
-    minmax(150px,1fr));
-    gap:32px;
+  
 }
 
 .pract_img{
@@ -65,7 +90,7 @@ h1{
     margin: 20px auto;
     max-width: 600px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 400px;
+
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -74,38 +99,13 @@ h1{
 
 
 @media(min-width:744px) {
-  
-    .homeContent{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 1115px;
-        justify-content: center;
-        background-color: #EAEAEA;
-        margin: 0 auto;
-    }
-    section.graySection{
-        background-color: #EAEAEA;
-        border-bottom: 0px;
-        
-        min-width: 372px;
-        padding: 24px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-    .graySection.test p{
-        margin-bottom: 26px;
-    }
+
     
 /* Mi codigo para la pagina*/
 div.container {
-    display:grid;
+
     place-items:center;
-    grid-template-columns:
-    repeat( auto-fit,
-    minmax(150px,1fr));
-    gap:32px;
+
 }
 
 .pract_img{
@@ -145,7 +145,7 @@ h1{
     margin: 20px auto;
     max-width: 600px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 400px;
+
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -157,12 +157,9 @@ h1{
    
 /* Mi codigo para la pagina*/
 div.container {
-    display:grid;
+
     place-items:center;
-    grid-template-columns:
-    repeat( auto-fit,
-    minmax(150px,1fr));
-    gap:32px;
+
 }
 
 .pract_img{
@@ -203,7 +200,7 @@ h1{
     max-width: 600px;
    
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 400px;
+
     margin-top: 100px;
     margin-bottom: 100px;
 }
